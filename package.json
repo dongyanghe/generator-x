@@ -1,0 +1,28 @@
+{
+  "name": "generator-x",
+  "version": "0.0.1",
+  "description": "{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
+  "main": "index.js",
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/dongyanghe/x-generator.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "2732067273@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/dongyanghe/x-generator/issues"
+  },
+  "homepage": "https://gitlab.com/dongyanghe/x-generator#readme",
+  "dependencies": {
+    "yeoman-generator": "^4.0.1"
+  }
+}
