@@ -1399,17 +1399,21 @@ module.exports = class extends Generator {
 
     /**
      * Register prettier as transform stream for prettifying files during generation
+     * 注册更漂亮作为变换流，用于在生成期间美化文件
      * @param {any} generator
      */
     registerPrettierTransform(generator = this) {
         // Prettier is clever, it uses correct rules and correct parser according to file extension.
+        // glup插件，它根据文件扩展使用正确的规则和正确的解析器。
         const prettierFilter = filter(['{,**/}*.{md,json,ts,tsx,scss,css,yml}'], { restore: true });
         // this pipe will pass through (restore) anything that doesn't match typescriptFilter
+        // 此管道将通过（恢复）与typescriptFilter不匹配的任何内容
         generator.registerTransformStream([prettierFilter, prettierTransform(prettierOptions), prettierFilter.restore]);
     }
 
     /**
      * Check if the subgenerator has been invoked from JHipster CLI or from Yeoman (yo jhipster:subgenerator)
+     * 检查是否已从JHipster CLI或Yeoman（yo jhipster：subgenerator）调用子生成器
      */
     checkInvocationFromCLI() {
         if (!this.options['from-cli']) {

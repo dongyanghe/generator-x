@@ -30,6 +30,7 @@ module.exports = class extends BaseGenerator {
         super(args, opts);
 
         this.configOptions = {};
+        /** *********************************************************启动命令配置参数（如蓝图配置）**************************************************************** */
         // This adds support for a `--from-cli` flag
         this.option('from-cli', {
             desc: 'Indicates the command is run from JHipster CLI',
@@ -175,7 +176,7 @@ module.exports = class extends BaseGenerator {
             type: Boolean,
             defaults: false
         });
-
+        //  从用户传入配置或Generator.Storage设置初始化配置
         this.skipClient = this.configOptions.skipClient = this.options['skip-client'] || this.config.get('skipClient');
         this.skipServer = this.configOptions.skipServer = this.options['skip-server'] || this.config.get('skipServer');
         this.skipUserManagement = this.configOptions.skipUserManagement =

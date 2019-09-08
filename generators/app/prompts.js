@@ -29,7 +29,9 @@ module.exports = {
     askForTestOpts,
     askForMoreModules
 };
-
+/**
+ * 询问是否向本项目提供日志帮助
+ */
 function askForInsightOptIn() {
     const done = this.async();
 
