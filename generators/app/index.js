@@ -221,6 +221,10 @@ module.exports = class extends BaseGenerator {
         this.registerPrettierTransform();
     }
 
+    /**
+     * 初始化方法
+     * 检查当前项目状态，获取配置等
+     */
     get initializing() {
         return {
             validateFromCli() {
@@ -317,6 +321,10 @@ module.exports = class extends BaseGenerator {
         };
     }
 
+    /**
+     * 提示用户选择的地方
+     * this.prompt()
+     */
     get prompting() {
         return {
             askForInsightOptIn: prompts.askForInsightOptIn,
@@ -325,6 +333,10 @@ module.exports = class extends BaseGenerator {
         };
     }
 
+    /**
+     * 保存配置并配置项目
+     * 创建.editorconfig文件和其他元数据文件
+     */
     get configuring() {
         return {
             setup() {
@@ -405,6 +417,9 @@ module.exports = class extends BaseGenerator {
         };
     }
 
+    /**
+     * 如果方法名称与优先级不匹配，则会将其推送到该组
+     */
     get default() {
         return {
             askForTestOpts: prompts.askForTestOpts,
@@ -468,6 +483,9 @@ module.exports = class extends BaseGenerator {
         };
     }
 
+    /**
+     * 编写生成器特定文件（路由，控制器等）的位置
+     */
     get writing() {
         return {
             cleanup() {
@@ -515,6 +533,9 @@ module.exports = class extends BaseGenerator {
         };
     }
 
+    /**
+     * 清理， Say bye
+     */
     get end() {
         return {
             gitCommit() {

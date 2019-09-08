@@ -18,7 +18,9 @@
  */
 const chalk = require('chalk');
 const statistics = require('../statistics');
-
+/**
+ * 用户交互控制
+ */
 module.exports = {
     askForInsightOptIn,
     askForApplicationType,

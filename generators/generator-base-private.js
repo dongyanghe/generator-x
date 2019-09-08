@@ -44,6 +44,13 @@ const SERVER_TEST_SRC_DIR = constants.SERVER_TEST_SRC_DIR;
  * as these can have breaking changes without a major version bump
  *
  * The method signatures in private API can be changed without a major version change.
+ *
+ * 这是生成器基私有类。
+ * 这提供了内部使用的所有私有api方法。
+ * 这些方法不应该使用commonjs require直接使用，
+ * 因为这些可以在没有主要版本冲突的情况下有突破性的改变
+ *
+ * 私有api中的方法签名可以在没有重大版本更改的情况下更改。
  */
 module.exports = class extends Generator {
     constructor(args, opts) {
