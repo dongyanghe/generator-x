@@ -820,6 +820,8 @@ module.exports = class extends Generator {
 
     /**
      * Check if the generator specified as blueprint is installed.
+     * 检查生成器指定的蓝图是否已安装。
+     * @callback app.initializing.validateBlueprint
      * @param {string} blueprint - generator name
      */
     checkBlueprint(blueprint, subGen = '') {
