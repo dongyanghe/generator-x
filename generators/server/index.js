@@ -29,7 +29,10 @@ const statistics = require('../statistics');
 const { getBase64Secret, getRandomHex } = require('../utils');
 
 let useBlueprints;
-
+/**
+ * 默认生成使用的蓝图
+ * generators\app\index.js询问完项目名后切入
+ */
 module.exports = class extends BaseBlueprintGenerator {
     constructor(args, opts) {
         super(args, opts);
@@ -295,6 +298,10 @@ module.exports = class extends BaseBlueprintGenerator {
         };
     }
 
+    /**
+     * 初始化方法
+     * 检查当前项目状态，获取配置等
+     */
     get initializing() {
         if (useBlueprints) return;
         return this._initializing();

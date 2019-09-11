@@ -24,6 +24,8 @@ const BaseGenerator = require('./generator-base');
  * This is the base class for a generator that can be extended through a blueprint.
  *
  * The method signatures in public API should not be changed without a major version change
+ * 
+ * 可扩展的生成器的基类
  */
 module.exports = class extends BaseGenerator {
     // Public API method used by the getter and also by Blueprints

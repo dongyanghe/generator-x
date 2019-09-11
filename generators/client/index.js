@@ -169,6 +169,10 @@ module.exports = class extends BaseBlueprintGenerator {
         };
     }
 
+    /**
+     * 初始化方法
+     * 检查当前项目状态，获取配置等
+     */
     get initializing() {
         if (useBlueprints) return;
         return this._initializing();
@@ -192,6 +196,10 @@ module.exports = class extends BaseBlueprintGenerator {
         };
     }
 
+    /**
+     * 提示用户选择的地方
+     * this.prompt()
+     */
     get prompting() {
         if (useBlueprints) return;
         return this._prompting();
@@ -263,7 +271,10 @@ module.exports = class extends BaseBlueprintGenerator {
             }
         };
     }
-
+    /**
+     * 保存配置并配置项目
+     * 创建.editorconfig文件和其他元数据文件
+     */
     get configuring() {
         if (useBlueprints) return;
         return this._configuring();

@@ -337,6 +337,7 @@ module.exports = class extends BaseGenerator {
     /**
      * 保存配置并配置项目
      * 创建.editorconfig文件和其他元数据文件
+     * 切入对应项目类型的生成蓝图
      */
     get configuring() {
         return {
