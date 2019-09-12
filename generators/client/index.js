@@ -62,7 +62,7 @@ module.exports = class extends BaseBlueprintGenerator {
         });
 
         this.setupClientOptions(this);
-
+        //  如果有则使用自定义蓝图
         useBlueprints = !opts.fromBlueprint && this.instantiateBlueprints('client');
     }
 
@@ -271,6 +271,7 @@ module.exports = class extends BaseBlueprintGenerator {
             }
         };
     }
+
     /**
      * 保存配置并配置项目
      * 创建.editorconfig文件和其他元数据文件

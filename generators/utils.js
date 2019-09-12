@@ -508,6 +508,8 @@ function loadBlueprintsFromConfiguration(generator) {
  * @param {string} blueprints - comma separated list of blueprint names, e.g kotlin,vuewjs@1.0.1. If an array then
  * no processing is performed and it is returned as is.
  * @returns {Array} an array that contains the info for each blueprint
+ *
+ * 蓝图名称列表
  */
 function parseBluePrints(blueprints) {
     if (blueprints && !Array.isArray(blueprints)) {

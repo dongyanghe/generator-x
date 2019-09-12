@@ -1090,6 +1090,10 @@ module.exports = class extends PrivateBase {
      * @param {string} npmPackageName - package name
      * @param {string} subGen - sub generator name
      * @param {any} options - options to pass
+     * 生成一个外部生成器
+     * @param {string} npmpackagename-包名称
+     * @param {string} 子生成器-子生成器名称
+     * @param {any} options-要传递的选项
      */
     composeExternalModule(npmPackageName, subGen, options) {
         let generatorTocall = path.join(process.cwd(), 'node_modules', npmPackageName, 'generators', subGen);

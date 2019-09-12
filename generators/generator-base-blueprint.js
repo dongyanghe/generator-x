@@ -24,7 +24,7 @@ const BaseGenerator = require('./generator-base');
  * This is the base class for a generator that can be extended through a blueprint.
  *
  * The method signatures in public API should not be changed without a major version change
- * 
+ *
  * 可扩展的生成器的基类
  */
 module.exports = class extends BaseGenerator {
@@ -68,10 +68,15 @@ module.exports = class extends BaseGenerator {
      * @param {string} subGen - sub generator
      * @param {any} extraOptions - extra options to pass to blueprint generator
      * @return {true} useBlueprints - true if one or more blueprints generators have been constructed; false otherwise
+     *
+     * 实例化蓝图生成器（如果有）。
+     * @param {string} 子生成器类型，如client
+     * @param {any} extranoptions-要传递给blueprint生成器的额外选项
+     * @返回 {true} useBlueprints-true，如果已经构造了一个或多个蓝图生成器；否则返回false
      */
     instantiateBlueprints(subGen, extraOptions) {
         let useBlueprints = false;
-
+        //  获取蓝图名称列表
         const blueprints = jhipsterUtils.parseBluePrints(
             this.options.blueprints ||
                 this.configOptions.blueprints ||
@@ -90,6 +95,7 @@ module.exports = class extends BaseGenerator {
                     bpOptions = { ...bpOptions, ...extraOptions };
                 }
                 const useBP = this.composeBlueprint(blueprint.name, subGen, bpOptions);
+                //  列表里是否有对应类型蓝图
                 if (!useBlueprints && useBP) {
                     useBlueprints = true;
                 }

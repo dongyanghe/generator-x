@@ -771,6 +771,11 @@ module.exports = class extends Generator {
      * @param {string} blueprint - name of the blueprint
      * @param {string} subGen - sub generator
      * @param {any} options - options to pass to blueprint generator
+     *
+     * 组成外部蓝图模块
+     * @param {string} blueprint-蓝图的名称
+     * @param {string} 子生成器类型名
+     * @param {any} options-传递给蓝图生成器的选项
      */
     composeBlueprint(blueprint, subGen, options = {}) {
         if (blueprint) {
