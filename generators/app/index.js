@@ -377,7 +377,7 @@ module.exports = class extends BaseGenerator {
                 }
                 this.configOptions.clientPackageManager = this.clientPackageManager;
             },
-
+            //  切入蓝图
             composeServer() {
                 if (this.skipServer) return;
                 const options = this.options;
@@ -390,7 +390,7 @@ module.exports = class extends BaseGenerator {
                     debug: this.isDebugEnabled
                 });
             },
-
+            //  切入蓝图
             composeClient() {
                 if (this.skipClient) return;
                 const options = this.options;
@@ -402,7 +402,7 @@ module.exports = class extends BaseGenerator {
                     debug: this.isDebugEnabled
                 });
             },
-
+            //  切入蓝图
             composeCommon() {
                 const options = this.options;
                 const configOptions = this.configOptions;
